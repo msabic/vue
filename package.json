@@ -14,7 +14,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "material-icons": "^0.2.3",
     "vue": "^2.5.2",
+    "vue-material-design-icons": "^2.1.1",
     "vue-router": "^3.0.1",
     "vuetify": "^1.2.4"
   },
@@ -65,6 +67,8 @@
     "selenium-server": "^3.0.1",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.5.1",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-jest": "^1.0.2",

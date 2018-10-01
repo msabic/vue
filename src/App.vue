@@ -1,55 +1,44 @@
 <template>
- <v-app>
-   <v-card class="hide-overflow" height="200px">
-      <v-card-text class="text-xs-center">
-      <v-btn
-        flat
-        color="primary"
-        @click="showNav = !showNav"
-      >
-        Toggle Nav
-      </v-btn>
-    </v-card-text>
-    <v-bottom-nav
-      :active.sync="activeBtn"
-      :value="showNav"
-      absolute
-      color="transparent"
-    >
-      <v-btn flat color="teal">
-        <span>Recents</span>
-        <v-icon>history</v-icon>
-      </v-btn>
+  <v-app dark>
+    <v-navigation-drawer v-model="sideNav">
+      <v-list>
+        <v-list-tile>
+          <v-list-tile-action>
+            <v-icon>gavel</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>View Meetups</v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar dark class="primary">
+      <v-toolbar-side-icon
+        @click.stop="sideNav = !sideNav"
+        class="hidden-sm-and-up "></v-toolbar-side-icon>
+      <v-toolbar-title>DevMeetup</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn flat>
+          <v-icon left dark>call</v-icon>
+          View Meetups
+        </v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+    <main>
 
-      <v-btn flat color="teal">
-        <span>Favorites</span>
-        <v-icon>favorite</v-icon>
-      </v-btn>
-
-      <v-btn flat color="teal">
-        <span>Nearby</span>
-        <v-icon>place</v-icon>
-      </v-btn>
-    </v-bottom-nav>
-   </v-card>
-   <router-view></router-view>
-   </v-app>
+    </main>
+  </v-app>
 </template>
 
 <script>
 export default {
   data () {
     return {
-  sideNav: false,
-  // drawer: true,
-      items: [
-        {title: 'Active notes', icon: 'style', link: '/'},
-        {title: 'Test', icon: 'delete_sweep', link: '/test'}
-      ]
+      sideNav: false
     }
   }
 }
 </script>
 
-<style>
+<style lang="stylus">
+  @import './stylus/main'
 </style>
