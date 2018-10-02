@@ -24,7 +24,7 @@
       </v-toolbar-items>
     </v-toolbar>
     <main>
-
+        <router-view></router-view>
     </main>
      <v-footer fix app
       dark
@@ -63,6 +63,9 @@ export default {
   data () {
     return {
       sideNav: false,
+      items: [
+        {title: 'Test', icon: 'delete_sweep', link: '/test'}
+      ],
       icons: [
         'face',
         'face',
