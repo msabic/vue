@@ -1,11 +1,11 @@
 <template>
-<v-app>
+<v-app class="grey darken-1">
     <v-container fix app>
-    <v-layout row ma-5 pa-5>
-      <v-flex xs12 sm6 offset-sm3>
-        <v-card>
-          <v-card-text>
-            <v-container>
+    <v-layout row ma-5 pa-5 >
+      <v-flex xs12 sm6 offset-sm3 >
+        <v-card >
+          <v-card-text >
+            <v-container >
               <form @submit.prevent="onSignup">
                 <v-layout row >
                   <v-flex xs12>
