@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace test_api
+namespace Api_For_App
 {
     public static class WebApiConfig
     {
@@ -13,7 +13,7 @@ namespace test_api
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-
+            
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

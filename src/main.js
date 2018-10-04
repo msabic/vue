@@ -20,6 +20,15 @@ new Vue({
       'fab fa-google-plus',
       'fab fa-linkedin',
       'fab fa-instagram'
-    ]
-  })
+    ],
+    email: '',
+    password: ''
+  }),
+  methods: {
+    submit () {
+      axios.post('/api/submit', {
+        email: this.email,
+        password: this.password
+      })
+    }}
 })
