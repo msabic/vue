@@ -83,3 +83,6 @@ C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\obj\Debug\Api_For_App.
 C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\System.Web.Cors.dll
 C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\System.Web.Http.Cors.dll
 C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\System.Web.Http.Cors.xml
+C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\System.Web.Cors.dll
+C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\System.Web.Http.Cors.dll
+C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\System.Web.Http.Cors.xml
