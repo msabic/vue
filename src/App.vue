@@ -17,7 +17,7 @@
       <v-toolbar-title>DevMeetup</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn flat>
+        <v-btn  flat>
           <v-icon left dark>call</v-icon>
           View Meetups
         </v-btn>
@@ -70,7 +70,7 @@ export default {
         'zoom_in',
         'zoom_out',
         'chat',
-        'cell_wifi'
+        'alarm'
       ]
     }
   }

@@ -4,22 +4,41 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Newtonsoft.Json;
+using System.Web.Http.Cors;
 
 namespace Api_For_App.Controllers
 {
     public class AppController : ApiController
     {
-        [Authorize]
+
+        Models.TestClass aclass = new Models.TestClass();
+        List<Models.TestClass> _aclass = new List<Models.TestClass>();
+        [HttpGet]
+        [EnableCors("*", "*", "*")]
         //[Route("/api/values")]
-        public IEnumerable<string> Get()
+        public List<Models.TestClass> Get()
         {
-            return new string[] { "value1", "value2" };
+           
+            aclass.a= "test: [{aa},{aa},{aa}]";
+            _aclass.Add(new Models.TestClass { a = "ab" });
+            _aclass.Add(new Models.TestClass { a = "ab" });
+            _aclass.Add(new Models.TestClass { a = "ab" });
+            _aclass.Add(new Models.TestClass { a = "ab" });
+            _aclass.Add(new Models.TestClass { a = "ab" });
+            return _aclass;
+            
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public List<Models.TestClass> Get(int id)
         {
-            return "value";
+            _aclass.Add(new Models.TestClass { a = "ab" });
+            _aclass.Add(new Models.TestClass { a = "ab" });
+            _aclass.Add(new Models.TestClass { a = "ab" });
+            _aclass.Add(new Models.TestClass { a = "ab" });
+            _aclass.Add(new Models.TestClass { a = "ab" });
+            return _aclass;
         }
 
         // POST api/values

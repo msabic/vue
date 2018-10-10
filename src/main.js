@@ -4,8 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
+
 Vue.config.productionTip = false
 Vue.use(Vuetify)
+window.axios = require('axios')
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+Vue.prototype.$http = window.axios
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -23,12 +27,5 @@ new Vue({
     ],
     email: '',
     password: ''
-  }),
-  methods: {
-    submit () {
-      axios.post('/api/submit', {
-        email: this.email,
-        password: this.password
-      })
-    }}
+  })
 })
