@@ -4,7 +4,7 @@
             <v-flex xs18 sm6>
         </v-flex>
             <v-spacer></v-spacer>
-        <v-btn light icon @click="add" >
+        <v-btn light icon @click="add">
             <v-icon size="34px" >add</v-icon>
         </v-btn>
         <v-btn light icon >
@@ -131,14 +131,14 @@ export default {
   data: () => ({
     sideNav: false,
     user: [],
-    id: null,
-    name: null,
-    surname: null,
-    email: null,
-    password: null,
-    contact: null,
-    active: null,
-    doctor: null,
+    ID: null,
+    Name: null,
+    Surname: null,
+    Email: null,
+    Password: null,
+    Contact: null,
+    Active: null,
+    Doctor: null,
     icons: [
       'add',
       'edit',
@@ -183,16 +183,18 @@ export default {
       console.log(this.name)
       axios
         .post('http://localhost:16586/api/user', {
-          name: this.name,
-          surname: this.surname,
-          email: this.email,
-          password: '',
-          contact: this.contact,
-          active: this.active,
-          doctor: 1})
+          ID: 1,
+          Name: this.name,
+          Surname: this.surname,
+          Email: this.email,
+          Password: '',
+          Contact: this.contact,
+          Active: this.active,
+          Doctor: 1})
         .then((response) => {
           console.log(response)
         })
+      this.mounted()
     }
   },
   created: function () {

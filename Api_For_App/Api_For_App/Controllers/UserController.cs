@@ -11,13 +11,13 @@ namespace Api_For_App.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UserController : ApiController
     {
-       
+        List<Models.UserModel> _user = new List<Models.UserModel>();
         [HttpGet]
         [EnableCors("*", "*", "*", "*")]
         //[Route("/api/values")]
         public IHttpActionResult Get()
         {
-            List<Models.UserModel> _user = new List<Models.UserModel>();
+            
             Models.UserModel user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
             user = new Models.UserModel(2, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
@@ -64,8 +64,9 @@ namespace Api_For_App.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]UserController value)
+        public void Post([FromBody]Models.UserModel user)
         {
+            _user.Add(user);
         }
 
         // PUT api/values/5
