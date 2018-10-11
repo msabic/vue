@@ -10,7 +10,6 @@ namespace Api_For_App
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            config.GetCorsEngine();
             config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();

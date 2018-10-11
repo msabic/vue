@@ -1,22 +1,23 @@
 <template>
-    <v-app dark>
+    <v-app class="blue lighten-5">
         <v-card-title >
             <v-flex xs18 sm6>
         </v-flex>
             <v-spacer></v-spacer>
-        <v-btn dark icon @click="this.add()">
+        <v-btn light icon @click="add" >
             <v-icon size="34px" >add</v-icon>
         </v-btn>
-        <v-btn dark icon >
+        <v-btn light icon >
             <v-icon size="34px" @click="mounted">edit</v-icon>
         </v-btn>
-        <v-btn dark icon >
+        <v-btn light icon >
             <v-icon size="34px" @click="mounted">delete</v-icon>
         </v-btn>
         </v-card-title >
         <v-card-title>
             <v-flex xs12 sm2>
           <v-text-field
+          light
             ref="name"
             v-model="name"
             class="mx-3"
@@ -27,6 +28,7 @@
         </v-flex>
         <v-flex xs12 sm2>
           <v-text-field
+          light
           ref="surname"
           v-model="surname"
             class="mx-3"
@@ -37,6 +39,7 @@
         </v-flex>
         <v-flex xs12 sm2>
           <v-text-field
+          light
           ref="email"
           v-model="email"
             class="mx-3"
@@ -48,6 +51,7 @@
         </v-flex>
         <v-flex xs12 sm2>
           <v-text-field
+          light
           ref="contact"
           v-model="contact"
             class="mx-3"
@@ -57,7 +61,8 @@
             type="phone"
           ></v-text-field>
         </v-flex>
-         <v-checkbox
+         <v-switch
+         light
          ref="active"
          v-model="active"
          class="mx-3"
@@ -65,7 +70,7 @@
             prepend-icon="check"
             primary
             hide-details
-          ></v-checkbox>
+          ></v-switch>
         </v-card-title>
         <v-data-table
     v-model="selected"
@@ -73,11 +78,11 @@
     :items="user"
     :pagination.sync="pagination"
     select-all
-    item-key="Name"
+    item-key="ID"
     class="elevation-1"
   >
     <template slot="headers" slot-scope="props">
-      <tr>
+      <tr light>
         <th>
           <v-checkbox
             :input-value="props.all"
@@ -99,7 +104,7 @@
       </tr>
     </template>
     <template slot="items" slot-scope="props">
-      <tr :active="props.selected" @click="props.selected = !props.selected">
+      <tr :active="props.selected" @click="props.selected = !props.selected" class="grey darken-1">
         <td>
           <v-checkbox
             :input-value="props.selected"
@@ -107,11 +112,13 @@
             hide-details
           ></v-checkbox>
         </td>
-        <td class="text-xs-center">{{ props.item.Name }}</td>
-        <td class="text-xs-center">{{ props.item.Surname }}</td>
-        <td class="text-xs-center">{{ props.item.Email }}</td>
-        <td class="text-xs-center">{{ props.item.Contact }}</td>
-        <td class="text-xs-reight"><v-checkbox primary hide-details :input-value=props.item.Active>></v-checkbox></td>
+        <td light style="display:none;" class="text-xs-center">{{ props.item.ID }}</td>
+        <td light class="text-xs-center">{{ props.item.Name }}</td>
+        <td light class="text-xs-center">{{ props.item.Surname }}</td>
+        <td light class="text-xs-center">{{ props.item.Email }}</td>
+        <td light class="text-xs-center">{{ props.item.Contact }}</td>
+        <td light class="text-xs-reight"><v-checkbox primary hide-details :input-value=props.item.Active disabled>></v-checkbox></td>
+        <td light class="text-xs-center">{{ props.item.Doctor }}</td>
       </tr>
     </template>
   </v-data-table>
@@ -124,11 +131,14 @@ export default {
   data: () => ({
     sideNav: false,
     user: [],
+    id: null,
     name: null,
-    username: null,
+    surname: null,
     email: null,
+    password: null,
     contact: null,
     active: null,
+    doctor: null,
     icons: [
       'add',
       'edit',
@@ -139,15 +149,12 @@ export default {
     },
     selected: [],
     headers: [
-      {
-        text: 'Name',
-        align: 'center',
-        value: 'Name'
-      },
+      { text: 'Name', align: 'center', value: 'Name' },
       { text: 'Surname', value: 'Surname' },
       { text: 'Email', value: 'Email' },
       { text: 'Contact', value: 'Contact' },
-      { text: 'Active', value: 'Active' }
+      { text: 'Active', value: 'Active' },
+      { text: 'Doctor', value: 'Doctor' }
     ]
   }),
 
@@ -171,16 +178,21 @@ export default {
           this.user = response.data
           console.log('podaci', response.data)
         })
-    }
-  },
-  add () {
-    console.log(this.name)
-    return {
-      name: this.name,
-      username: this.username,
-      email: this.email,
-      contact: this.contact,
-      active: this.active
+    },
+    add () {
+      console.log(this.name)
+      axios
+        .post('http://localhost:16586/api/user', {
+          name: this.name,
+          surname: this.surname,
+          email: this.email,
+          password: '',
+          contact: this.contact,
+          active: this.active,
+          doctor: 1})
+        .then((response) => {
+          console.log(response)
+        })
     }
   },
   created: function () {
