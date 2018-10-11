@@ -10,33 +10,56 @@ namespace Api_For_App.Controllers
 {
     public class UserController : ApiController
     {
-        Models.TestClass aclass = new Models.TestClass();
-        List<Models.TestClass> _aclass = new List<Models.TestClass>();
+       
         [HttpGet]
         [EnableCors("*", "*", "*")]
         //[Route("/api/values")]
-        public List<Models.TestClass> Get()
+        public IHttpActionResult Get()
         {
-
-            aclass.a = "test: [{aa},{aa},{aa}]";
-            _aclass.Add(new Models.TestClass { a = "ab" });
-            _aclass.Add(new Models.TestClass { a = "ab" });
-            _aclass.Add(new Models.TestClass { a = "ab" });
-            _aclass.Add(new Models.TestClass { a = "ab" });
-            _aclass.Add(new Models.TestClass { a = "ab" });
-            return _aclass;
-
+            List<Models.UserModel> _user = new List<Models.UserModel>();
+            Models.UserModel user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            _user.Add(user);
+            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            _user.Add(user);
+            return Ok(_user);
         }
 
         // GET api/values/5
-        public List<Models.TestClass> Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            _aclass.Add(new Models.TestClass { a = "ab" });
-            _aclass.Add(new Models.TestClass { a = "ab" });
-            _aclass.Add(new Models.TestClass { a = "ab" });
-            _aclass.Add(new Models.TestClass { a = "ab" });
-            _aclass.Add(new Models.TestClass { a = "ab" });
-            return _aclass;
+            return Ok();
         }
 
         // POST api/values

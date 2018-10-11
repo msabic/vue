@@ -4,58 +4,68 @@
             <v-flex xs18 sm6>
         </v-flex>
             <v-spacer></v-spacer>
-        <v-btn  v-for="icon in icons" :key="icon" dark icon >
-            <v-icon size="34px" @click="mounted">{{ icon }}</v-icon>
+        <v-btn dark icon @click="this.add()">
+            <v-icon size="34px" >add</v-icon>
+        </v-btn>
+        <v-btn dark icon >
+            <v-icon size="34px" @click="mounted">edit</v-icon>
+        </v-btn>
+        <v-btn dark icon >
+            <v-icon size="34px" @click="mounted">delete</v-icon>
         </v-btn>
         </v-card-title >
         <v-card-title>
             <v-flex xs12 sm2>
           <v-text-field
+            ref="name"
+            v-model="name"
             class="mx-3"
-            label="Dessert"
+            label="Name"
+            prepend-icon="person"
             single-line
           ></v-text-field>
         </v-flex>
         <v-flex xs12 sm2>
           <v-text-field
+          ref="surname"
+          v-model="surname"
             class="mx-3"
-            label="Calories"
+            label="Surname"
+            prepend-icon="person"
             single-line
-            type="number"
           ></v-text-field>
         </v-flex>
         <v-flex xs12 sm2>
           <v-text-field
+          ref="email"
+          v-model="email"
             class="mx-3"
-            label="Fat"
+            label="Email"
             single-line
-            type="number"
+            prepend-icon="email"
+            type="email"
           ></v-text-field>
         </v-flex>
         <v-flex xs12 sm2>
           <v-text-field
+          ref="contact"
+          v-model="contact"
             class="mx-3"
-            label="Carbs"
+            label="Contact"
             single-line
-            type="number"
+            prepend-icon="phone"
+            type="phone"
           ></v-text-field>
         </v-flex>
-        <v-flex xs12 sm2>
-          <v-text-field
-            class="mx-3"
-            label="Protein"
-            single-line
-            type="number"
-          ></v-text-field>
-        </v-flex>
-        <v-flex xs12 sm2>
-          <v-text-field
-            class="mx-3"
-            label="Iron"
-            single-line
-            type="number"
-          ></v-text-field>
-        </v-flex>
+         <v-checkbox
+         ref="active"
+         v-model="active"
+         class="mx-3"
+            label="Active"
+            prepend-icon="check"
+            primary
+            hide-details
+          ></v-checkbox>
         </v-card-title>
         <v-data-table
     v-model="selected"
@@ -63,7 +73,7 @@
     :items="user"
     :pagination.sync="pagination"
     select-all
-    item-key="name"
+    item-key="Name"
     class="elevation-1"
   >
     <template slot="headers" slot-scope="props">
@@ -97,12 +107,11 @@
             hide-details
           ></v-checkbox>
         </td>
-        <td>{{ props.item.name }}</td>
-        <td class="text-xs-right">{{ props.item.calories }}</td>
-        <td class="text-xs-right">{{ props.item.fat }}</td>
-        <td class="text-xs-right">{{ props.item.carbs }}</td>
-        <td class="text-xs-right">{{ props.item.protein }}</td>
-        <td class="text-xs-right">{{ props.item.iron }}</td>
+        <td class="text-xs-center">{{ props.item.Name }}</td>
+        <td class="text-xs-center">{{ props.item.Surname }}</td>
+        <td class="text-xs-center">{{ props.item.Email }}</td>
+        <td class="text-xs-center">{{ props.item.Contact }}</td>
+        <td class="text-xs-reight"><v-checkbox primary hide-details :input-value=props.item.Active>></v-checkbox></td>
       </tr>
     </template>
   </v-data-table>
@@ -115,6 +124,11 @@ export default {
   data: () => ({
     sideNav: false,
     user: [],
+    name: null,
+    username: null,
+    email: null,
+    contact: null,
+    active: null,
     icons: [
       'add',
       'edit',
@@ -126,15 +140,14 @@ export default {
     selected: [],
     headers: [
       {
-        text: 'Dessert (100g serving)',
+        text: 'Name',
         align: 'center',
-        value: 'name'
+        value: 'Name'
       },
-      { text: 'Calories', value: 'calories' },
-      { text: 'Fat (g)', value: 'fat' },
-      { text: 'Carbs (g)', value: 'carbs' },
-      { text: 'Protein (g)', value: 'protein' },
-      { text: 'Iron (%)', value: 'iron' }
+      { text: 'Surname', value: 'Surname' },
+      { text: 'Email', value: 'Email' },
+      { text: 'Contact', value: 'Contact' },
+      { text: 'Active', value: 'Active' }
     ]
   }),
 
@@ -153,11 +166,21 @@ export default {
     },
     mounted () {
       axios
-        .get('http://localhost:16586/api/app/6')
+        .get('http://localhost:16586/api/user')
         .then(response => {
           this.user = response.data
           console.log('podaci', response.data)
         })
+    }
+  },
+  add () {
+    console.log(this.name)
+    return {
+      name: this.name,
+      username: this.username,
+      email: this.email,
+      contact: this.contact,
+      active: this.active
     }
   },
   created: function () {

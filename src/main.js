@@ -4,10 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
-import Notifications from 'vue-notification'
 Vue.config.productionTip = false
 Vue.use(Vuetify)
-Vue.use(Notifications)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
