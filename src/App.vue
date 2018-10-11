@@ -17,9 +17,13 @@
       <v-toolbar-title>DevMeetup</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
+        <v-btn  flat href="/#/test">
+          <v-icon left dark>navigate_next</v-icon>
+          Login
+        </v-btn>
         <v-btn  flat>
-          <v-icon left dark>call</v-icon>
-          View Meetups
+          <v-icon left dark>navigate_before</v-icon>
+          Logout
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -75,6 +79,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style lang="stylus"> @import './stylus/main' </style>

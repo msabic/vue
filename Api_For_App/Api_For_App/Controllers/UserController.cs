@@ -8,50 +8,51 @@ using System.Web.Http.Cors;
 
 namespace Api_For_App.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UserController : ApiController
     {
        
         [HttpGet]
-        [EnableCors("*", "*", "*")]
+        [EnableCors("*", "*", "*", "*")]
         //[Route("/api/values")]
         public IHttpActionResult Get()
         {
             List<Models.UserModel> _user = new List<Models.UserModel>();
             Models.UserModel user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            user = new Models.UserModel(2, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            user = new Models.UserModel(3, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            user = new Models.UserModel(4, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            user = new Models.UserModel(5, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            user = new Models.UserModel(6, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            user = new Models.UserModel(7, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            user = new Models.UserModel(8, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            user = new Models.UserModel(9, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            user = new Models.UserModel(10, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            user = new Models.UserModel(11, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            user = new Models.UserModel(12, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            user = new Models.UserModel(13, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            user = new Models.UserModel(14, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            user = new Models.UserModel(15, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            user = new Models.UserModel(16, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
+            user = new Models.UserModel(17, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);
             _user.Add(user);
-            user = new Models.UserModel(1, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
+            user = new Models.UserModel(18, "Ante", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
             return Ok(_user);
         }
@@ -63,12 +64,12 @@ namespace Api_For_App.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void Post([FromBody]UserController value)
         {
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Models.UserModel value)
         {
         }
 
