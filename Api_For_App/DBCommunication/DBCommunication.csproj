@@ -63,13 +63,14 @@
     </Compile>
     <Compile Include="DBCommunication.cs" />
     <Compile Include="DBCommunicationAdmin.cs" />
+    <Compile Include="DBCommunicationGET\GetDoctor.cs" />
     <Compile Include="DBCommunicationGET\GetUser.cs" />
+    <Compile Include="DBCommunicationNEW\AddDoctor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DBCommunicationDELETE\" />
     <Folder Include="DBCommunicationEDIT\" />
-    <Folder Include="DBCommunicationNEW\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">

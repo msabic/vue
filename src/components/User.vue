@@ -137,7 +137,7 @@ export default {
     Email: null,
     Password: null,
     Contact: null,
-    Active: null,
+    Location: null,
     Doctor: null,
     icons: [
       'add',
@@ -189,12 +189,12 @@ export default {
           Email: this.email,
           Password: '',
           Contact: this.contact,
-          Active: this.active,
-          Doctor: 1})
+          Location: ''
+        })
         .then((response) => {
+          this.user.push(response)
           console.log(response)
         })
-      this.mounted()
     }
   },
   created: function () {

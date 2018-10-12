@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace DBCommunication
 {
     public interface DBCommunication
     {
-        void Get();
+        List<Models.Model.Doctor> GetDoctor();
+        bool AddDoctor(Doctor doctor);
     }
 }
