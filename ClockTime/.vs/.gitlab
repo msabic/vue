@@ -1,0 +1,13 @@
+{
+  "User": {
+    "Id": 26,
+    "Username": "mijo.sabic",
+    "Name": "Mijo Sabic",
+    "Email": "mijo.sabic@cor-net.net",
+    "AvatarUrl": "https://secure.gravatar.com/avatar/3083a3d5278030afdeaad6a45937dbbc?s=80&d=identicon",
+    "PrivateToken": "d734a0d7c52298a2925fdf5bcf10e0a31681bff09e17f0f3d5a0b5979c162810",
+    "Host": "https://gitlab.cor-net.net/",
+    "TwoFactorEnabled": false,
+    "ApiVersion": 3
+  }
+}

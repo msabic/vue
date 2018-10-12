@@ -17,7 +17,7 @@ namespace Api_For_App.Controllers
         //[Route("/api/values")]
         public IHttpActionResult Get()
         {
-            
+            DBCommunication.DBCommunicationGET.GetUser gu = new DBCommunication.DBCommunicationGET.GetUser();gu.Get();
             Models.UserModel user = new Models.UserModel(1, "Mijo", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", true, 1);
             _user.Add(user);
             user = new Models.UserModel(2, "Mate", "Šabić", "mijo.sabic@gmail.com", "saf", "012/345-678", false, 1);

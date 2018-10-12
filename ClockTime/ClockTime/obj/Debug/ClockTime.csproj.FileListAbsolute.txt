@@ -1,0 +1,9 @@
+C:\Users\CorNet\Desktop\vue\ClockTime\ClockTime\bin\Debug\ClockTime.exe.config
+C:\Users\CorNet\Desktop\vue\ClockTime\ClockTime\bin\Debug\ClockTime.exe
+C:\Users\CorNet\Desktop\vue\ClockTime\ClockTime\bin\Debug\ClockTime.pdb
+C:\Users\CorNet\Desktop\vue\ClockTime\ClockTime\obj\Debug\ClockTime.csprojResolveAssemblyReference.cache
+C:\Users\CorNet\Desktop\vue\ClockTime\ClockTime\obj\Debug\ClockTime.Form1.resources
+C:\Users\CorNet\Desktop\vue\ClockTime\ClockTime\obj\Debug\ClockTime.Properties.Resources.resources
+C:\Users\CorNet\Desktop\vue\ClockTime\ClockTime\obj\Debug\ClockTime.csproj.GenerateResource.Cache
+C:\Users\CorNet\Desktop\vue\ClockTime\ClockTime\obj\Debug\ClockTime.exe
+C:\Users\CorNet\Desktop\vue\ClockTime\ClockTime\obj\Debug\ClockTime.pdb

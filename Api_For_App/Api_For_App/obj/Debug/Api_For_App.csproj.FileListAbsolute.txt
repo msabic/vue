@@ -86,3 +86,11 @@ C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\System.Web.Http.Co
 C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\System.Web.Cors.dll
 C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\System.Web.Http.Cors.dll
 C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\System.Web.Http.Cors.xml
+C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\DBCommunication.dll
+C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\Google.Protobuf.dll
+C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\Models.dll
+C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\MySql.Data.dll
+C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\DBCommunication.pdb
+C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\Models.pdb
+C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\Google.Protobuf.xml
+C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\MySql.Data.xml
