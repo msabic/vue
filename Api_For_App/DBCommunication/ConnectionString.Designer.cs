@@ -61,7 +61,7 @@ namespace DBCommunication {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Server=localhost;Port=3306;Database=ordinacija;UID=root;Password=12345.
+        ///   Looks up a localized string similar to Server=localhost;Port=3306;Database=ordinacija;UID=root;Password=12345;SslMode=none;.
         /// </summary>
         internal static string ConnString {
             get {

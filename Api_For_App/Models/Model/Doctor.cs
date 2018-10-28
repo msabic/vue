@@ -130,13 +130,13 @@ namespace Models.Model
         }
         public Doctor(IDataReader reader)
         {
-            this.Id=reader.GetRecord<int>("ID_Doctor");
-            this.Name = reader.GetRecord<string>("Name");
-            this.Surname = reader.GetRecord<string>("Surname");
+            this.Id=reader.GetRecord<int>("ID_Doktor");
+            this.Name = reader.GetRecord<string>("Ime");
+            this.Surname = reader.GetRecord<string>("Prezime");
             this.Email = reader.GetRecord<string>("Email");
-            this.Password = reader.GetRecord<string>("Password");
-            this.Contact = reader.GetRecord<string>("Contact");
-            this.Location = reader.GetRecord<string>("Location");
+            this.Password = reader.GetRecord<string>("Lozinka");
+            this.Contact = reader.GetRecord<string>("Kontakt");
+           
         }
     }
 }

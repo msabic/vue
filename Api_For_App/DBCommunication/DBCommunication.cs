@@ -11,5 +11,7 @@ namespace DBCommunication
     {
         List<Models.Model.Doctor> GetDoctor();
         bool AddDoctor(Doctor doctor);
+        Doctor GetDoctorForID(int id);
+        bool DeleteDoctor(int id);
     }
 }

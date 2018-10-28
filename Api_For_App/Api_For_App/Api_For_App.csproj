@@ -140,6 +140,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AppController.cs" />
+    <Compile Include="Controllers\DoctorController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DBController\DBCommunication.cs" />
     <Compile Include="DBController\DBCommunicationAdmin.cs" />

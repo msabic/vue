@@ -1,32 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBCommunication.DBCommunicationGET
+namespace DBCommunication.DBCommunicationDELETE
 {
-    public class GetDoctor
+    class DeleteDoctor
     {
-        public List<Models.Model.Doctor> Execute()
+
+        public bool Execute(int id)
         {
-            List<Models.Model.Doctor> _doctor = new List<Models.Model.Doctor>();
+            Models.Model.Doctor doctor = new Models.Model.Doctor();
             try
             {
                 using (MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection(ConnectionString.ConnString.ToString()))
                 {
                     conn.Open();
                     MySql.Data.MySqlClient.MySqlCommand command = conn.CreateCommand();
-                    command.CommandText = string.Format(@"SELECT * FROM  doktor;");
+                    command.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@id", id));
+                    command.CommandText = string.Format(@"DELETE FROM  doktor where ID_Doktor=@id;");
                     try
                     {
                         MySql.Data.MySqlClient.MySqlDataReader reader = command.ExecuteReader();
-                        IDataRecord record = reader as MySql.Data.MySqlClient.MySqlDataReader;
-                        while (reader.Read())
-                        {
-                            _doctor.Add(new Models.Model.Doctor(reader));
-                        }
                     }
 
                     catch (Exception ex)
@@ -39,7 +35,7 @@ namespace DBCommunication.DBCommunicationGET
             {
                 throw ex;
             }
-            return _doctor;
+            return true;
         }
     }
 }

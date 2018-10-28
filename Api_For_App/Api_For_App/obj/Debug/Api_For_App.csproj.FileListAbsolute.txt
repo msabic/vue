@@ -94,3 +94,11 @@ C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\DBCommunication.pdb
 C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\Models.pdb
 C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\Google.Protobuf.xml
 C:\Users\CorNet\Desktop\vue\Api_For_App\Api_For_App\bin\MySql.Data.xml
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\DBCommunication.dll
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\Google.Protobuf.dll
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\Models.dll
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\MySql.Data.dll
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\DBCommunication.pdb
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\Models.pdb
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\Google.Protobuf.xml
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\Api_For_App\bin\MySql.Data.xml

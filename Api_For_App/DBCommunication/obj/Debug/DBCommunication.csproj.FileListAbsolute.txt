@@ -11,3 +11,16 @@ C:\Users\CorNet\Desktop\vue\Api_For_App\DBCommunication\bin\Debug\Google.Protobu
 C:\Users\CorNet\Desktop\vue\Api_For_App\DBCommunication\bin\Debug\MySql.Data.xml
 C:\Users\CorNet\Desktop\vue\Api_For_App\DBCommunication\obj\Debug\DBCommunication.dll
 C:\Users\CorNet\Desktop\vue\Api_For_App\DBCommunication\obj\Debug\DBCommunication.pdb
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\bin\Debug\DBCommunication.dll
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\bin\Debug\DBCommunication.pdb
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\bin\Debug\Google.Protobuf.dll
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\bin\Debug\Models.dll
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\bin\Debug\MySql.Data.dll
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\bin\Debug\Models.pdb
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\bin\Debug\Google.Protobuf.xml
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\bin\Debug\MySql.Data.xml
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\obj\Debug\DBCommunication.csprojResolveAssemblyReference.cache
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\obj\Debug\DBCommunication.ConnectionString.resources
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\obj\Debug\DBCommunication.csproj.GenerateResource.Cache
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\obj\Debug\DBCommunication.dll
+C:\Users\Mijo Šabić\Desktop\vue\Api_For_App\DBCommunication\obj\Debug\DBCommunication.pdb
